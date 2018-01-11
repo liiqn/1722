@@ -1,13 +1,15 @@
 <template>
-  <div>hello</div>
+  <div class="header">header</div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld'
+  name: 'index'
 }
 </script>
 
 <style scoped>
-
+	.header {
+		background: red;
+	}
 </style>
