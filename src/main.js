@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import FastClick from 'fastclick'
-import 'asserts/css/reset.css'
+import 'assets/css/reset.css'
 
 FastClick.attach(document.body)
 
