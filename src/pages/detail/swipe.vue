@@ -47,7 +47,6 @@
     width: 100%
     height: 100%
     z-index: 999
-  .swiper-img{
-    width:100%
-  }
+    .swiper-img
+      width:100%
 </style>

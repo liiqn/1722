@@ -11,7 +11,7 @@
   import IndexHeader from './header'
   import IndexMount from './mount'
   import IndexQuery from './query'
-  import IndexSwiper from './swiper'
+  import IndexSwiper from './swipe'
   import axios from 'axios'
   export default {
     name: 'index',
@@ -23,7 +23,7 @@
     },
     data () {
       return {
-        swiprInfo: []
+        swiperInfo: []
       }
     },
     methods: {
@@ -33,6 +33,7 @@
           .catch(this.handleGetDataErr.bind(this))
       },
       handleGetDataSucc (res) {
+        console.log(res)
         const data = res.data.data
         this.swiperList = data.swiperList
       },
