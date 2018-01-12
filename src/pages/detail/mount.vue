@@ -1,6 +1,6 @@
 <template>
-  <div class="header-mount">
-    <p class="mount-icon">d</p>
+  <div class="header-mount iconfont">
+    <p class="mount-icon">&#xe624;</p>
     <p>故宫</p>
   </div>
 </template>
@@ -11,10 +11,10 @@
   }
 </script>
 
-<style type="text/css" lang="stylus" scoped>
+<style rel="stylesheet/stylus" lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl";
   .header-mount
-    /*display: none*/
+    display: none
     position: fixed
     top: 0
     left:0
@@ -27,10 +27,10 @@
     color: white
     font-size: .32rem
   .mount-icon
-    position: absolute
-    left: 0rem
+    font-weight: bolder
     top: 0rem
-    background: red
     width: .8rem
     height: .88rem
+    position: absolute
+    left: 0rem
 </style>

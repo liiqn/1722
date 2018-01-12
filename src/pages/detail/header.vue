@@ -1,7 +1,7 @@
 <template>
-  <div class="header iconfont">
+  <div @click="handleClick" class="header iconfont">
     <img class="header-img" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt=""/>
-    <a class="header-fontIcon" href="#">d</a>
+    <a class="header-fontIcon" href="#">&#xe624;</a>
     <p class="header-tip">故宫(AAAAA景区)</p>
     <div class="header-tip2">10</div>
   </div>
@@ -9,17 +9,23 @@
 
 <script>
   export default {
-    name: 'index-header'
+    name: 'index-header',
+    methods: {
+      handleClick () {
+//        alert(1)
+      }
+    }
   }
+//  methods:
 </script>
 
-<style type="text/css" lang="stylus" scoped>
+<style rel="stylesheet/stylus" lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl";
   .header
     height: 0
     width: 100%
     padding-bottom: 55%
-    positoin: relative
+    position: relative
     .header-tip
       position: absolute
       left: .2rem
@@ -29,15 +35,18 @@
     .header-img
       width: 100%
     .header-fontIcon
-      position: absolute
-      left: 0
-      top: 0
+      border-radius: 50%
+      background: rgba(0,0,0,.5)
+      color: white
       display: block
-      width: .72rem
-      heigth: .72rem
+      font-weight: bolder
+      height: .72rem
       line-height: .72rem
-      background: gray
-      text-indent: .24rem
+      left: .2rem
+      position: absolute
+      top: .2rem
+      text-indent: .2rem
+      width: .72rem
     .header-tip2
       position: absolute
       top: 3.5rem
