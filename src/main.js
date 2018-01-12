@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import FastClick from 'fastclick'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 569af2f3903eae637930f4cccc868bc555513cce
 import 'assets/css/reset.css'
 import 'assets/css/iconfont/iconfont.css'
 
