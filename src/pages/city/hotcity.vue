@@ -53,7 +53,7 @@ export default {
 				width: 28%
 				height: 0.56rem
 				text-align: center
-				line-height: 0.6rem
+				line-height: 0.7rem  
 				border: 0.02rem solid #cecece
 				border-radius: 0.1rem
 </style>
