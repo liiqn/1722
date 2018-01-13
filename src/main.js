@@ -15,6 +15,9 @@ Vue.config.productionTip = false
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
+const bus = new Vue()
+Vue.prototype.$bus = bus
+
 new Vue({
   el: '#app',
   router,

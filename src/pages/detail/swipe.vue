@@ -2,7 +2,7 @@
   <div @click="handleHideClick" v-show="toggle" class="swiper">
     <swiper :options="swiperOption">
       <swiper-slide v-for="item of list" :key="item.id">
-        <img class="swiper-img" src="" alt="" :src="item.imgUrl"/>
+        <img class="swiper-img" alt="" :src="item.imgUrl"/>
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -17,7 +17,7 @@
     },
     data () {
       return {
-        toggle: true,
+        toggle: false,
         swiperOption: {
           loop: true,
           pagination: '.swiper-pagination',
@@ -25,12 +25,21 @@
         }
       }
     },
+    created () {
+      this.handleBindEvents()
+    },
     methods: {
       handleHideClick () {
          this.toggle = false
+      },
+      handleBindEvents () {
+        this.$bus.$on('change', this.handleShowChange.bind(this))
+      },
+      handleShowChange () {
+        this.toggle = true
       }
     }
-}
+  }
 
 </script>
 
@@ -49,4 +58,6 @@
     z-index: 999
     .swiper-img
       width:100%
+    .swiper-pagination
+      color: white
 </style>

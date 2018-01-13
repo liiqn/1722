@@ -1,15 +1,15 @@
 <template>
-  <div class="header-query">
-    <div class="query-top query-div iconfont">
+  <div class="header-query iconfont">
+    <div class="query-top query-div">
       <p class="iconfont">
-        <span>&#xe62c;</span>
+        <span class="query-notice2">&#xe62c;</span>
         <span class="query-txt">北京市东城区景山前街4号</span>
       </p>
       <span>&#xe730;</span>
     </div>
     <div class="query-bottom query-div">
       <p>
-        <span>&#xe601;</span>
+        <span class="query-notice2">&#xe601;</span>
         <span class="query-txt">查看经典简介及开放时间</span>
       </p>
       <span>&#xe730;</span>
@@ -17,21 +17,22 @@
 
     <div class="query-grade query-div">
       <p>
-        <span>&#xe60a;</span>
+        <span class="query-notice2 query-notice3">&#xe60a;</span>
         <span class="query-txt">查看经典简介及开放时间</span>
       </p>
       <div>
-          <span>...评论</span>
+          <span>1111评论</span>
           <span>&#xe730;</span>
       </div>
     </div>
 
     <div @click="handleShowTipClick" class="query-tip query-div">
       <div>
-        <span>&#xe600;</span>
+        <span class="query-notice">&#xe600;</span>
         <span class="query-txt">除法定节假日外，故宫博物馆实现周一闭馆。</span>
         <div class="query-data-tip" v-show="taggle">
-          <h2>&#xe600;景区公告</h2>
+          <span>&#xe600;</span>
+          <span>景区公告</span>
           <p>除法定节假日外，故宫博物馆实行周一闭关</p>
           <span  @click.stop="handleHideTipClick" class="data-tip-return">&#xe602;</span>
         </div>
@@ -62,6 +63,12 @@
 
 <style rel="stylesheet/stylus" type="text/css" lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl";
+  .query-notice
+    font-size: .5rem
+  .query-notice2
+    font-size: .4rem
+  .query-notice3
+    color: #00bcd4
   .header-query
     position: relative
     top: -.08rem

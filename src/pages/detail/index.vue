@@ -4,6 +4,8 @@
     <index-header></index-header>
     <index-query></index-query>
     <index-swiper :list="swiperInfo"></index-swiper>
+    <index-container :list="containerInfo"></index-container>
+    <index-comment :list="commentInfo"></index-comment>
   </div>
 </template>
 
@@ -12,6 +14,8 @@
   import IndexMount from './mount'
   import IndexQuery from './query'
   import IndexSwiper from './swipe'
+  import IndexContainer from './container'
+  import IndexComment from './comment'
   import axios from 'axios'
   export default {
     name: 'index',
@@ -19,11 +23,15 @@
       IndexHeader,
       IndexMount,
       IndexQuery,
-      IndexSwiper
+      IndexSwiper,
+      IndexContainer,
+      IndexComment
     },
     data () {
       return {
-        swiperInfo: []
+        swiperInfo: [],
+        containerInfo: [],
+        commentInfo: []
       }
     },
     methods: {
@@ -33,9 +41,10 @@
           .catch(this.handleGetDataErr.bind(this))
       },
       handleGetDataSucc (res) {
-        console.log(res)
         const data = res.data.data
-        this.swiperList = data.swiperList
+        this.swiperInfo = data.swiperList
+        this.containerInfo = data.containerList
+        this.commentInfo = data.commentList
       },
       handleGetDataErr () {
         console.log('err')

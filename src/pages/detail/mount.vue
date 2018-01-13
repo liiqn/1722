@@ -1,5 +1,5 @@
 <template>
-  <div class="header-mount iconfont">
+  <div v-show="toggle" class="header-mount iconfont">
     <p class="mount-icon">&#xe624;</p>
     <p>故宫</p>
   </div>
@@ -7,18 +7,31 @@
 
 <script>
   export default {
-    name: 'index-mount'
+    name: 'index-mount',
+    data () {
+      return {
+        toggle: false
+      }
+    },
+    mounted () {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    methods : {
+      handleScroll () {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+        scrollTop == 0 ? this.toggle = false : this.toggle = true
+      }
+    }
   }
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl";
   .header-mount
-    display: none
     position: fixed
     top: 0
     left:0
-    z-index: 99
+    z-index: 9999
     width: 100%
     height: .88rem
     background: #00bcd4

@@ -12,16 +12,16 @@
     name: 'index-header',
     methods: {
       handleClick () {
-//        alert(1)
+        this.$bus.$emit('change')
       }
     }
   }
-//  methods:
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl";
   .header
+    position: relative
     height: 0
     width: 100%
     padding-bottom: 55%
