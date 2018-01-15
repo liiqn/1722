@@ -34,11 +34,11 @@
         const downIcon = document.getElementsByClassName("downIcon")[index]
 //        downIcon.innerHTML == "&#xe611;" ? downIcon.innerHTML = "&#xe6a5;" : downIcon.innerHTML = "&#xe611;"
         if(downIcon.innerHTML == "&#xe611;"){
-        alert(1)
+//        alert(1)
           downIcon.innerHTML = "&#xe6a5;"
         }
         else{
-        alert(2)
+//        alert(2)
           downIcon.innerHTML = "&#xe611;"
         }
       }
