@@ -1,5 +1,6 @@
+
 <template>
-	<div>
+
  	<div class="details">
  		<div class="name">
  			<li class="name-one">【上午场】 故宫成人票+故宫全景手绘地图</li>
@@ -12,32 +13,39 @@
  		</div>
  		<div class="fare">
  			<li><b>¥</b><i>50</i> <span>张/起</span></li>
- 			<li class="notice">预定须知</li>
+ 			<li class="notice" @click="handleClick">预定须知</li>	
  		</div>
- 	</div>
- 	<div class="min"></div>
-  </div>
+	</div>
+ 		 
+
+
 </template>
 
 <script>
   export default {
-    name: 'index-details'
+    name: 'index-details',
+    methods: {
+    	handleClick: function () {
+    		console.log('ll')
+    	}
+    }
   }
 </script>
 
 <style lang="stylus" scoped>
   @import "../../assets/stylus/varibles.styl"
   .details
+  	border-bottom: .2rem solid #f5f5f5
   	display: flex
   	font-size: .35rem
   	line-height: .5rem
-  	padding: .2rem 
   	width: 100%
   	height: 1.66rem
 		.name
 			float: left
 			height: 1.66rem
-			width: 5.4rem
+			margin-left: .2rem
+			width: 72%
 			.name-one
 				height: 1.2rem
 			img
@@ -64,7 +72,9 @@
 			.notice
 				color: #7dbabd
 				font-size: .31rem
-	.min
-		height: .2rem
-		background: #f5f5f5	
+	.active
+		z-index: 10
+		width: 100px
+		height: 100px
+		background: red
 </style>

@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <div class="back iconfont">&#xe624;</div>
+    <router-link to="/details">
+      <div class="back iconfont">&#xe624;</div>
+    </router-link>  
     <div class="order-write">订单填写</div>
     <div class="login">登录</div>
   </div>
@@ -22,6 +24,7 @@ export default {
     height: .88rem
     line-height: .88rem
     .back
+      color: #fff
       font-size: .4rem
       font-weight: bold
       text-align: center
