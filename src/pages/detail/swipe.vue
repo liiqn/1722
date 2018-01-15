@@ -1,6 +1,6 @@
 <template>
   <div @click="handleHideClick" v-show="toggle" class="swiper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="list.length">
       <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" alt="" :src="item.imgUrl"/>
       </swiper-slide>

@@ -4,7 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import FastClick from 'fastclick'
+<<<<<<< HEAD
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 569af2f3903eae637930f4cccc868bc555513cce
+>>>>>>> origin/master
 import 'assets/css/reset.css'
 import 'assets/css/iconfont/iconfont.css'
 import 'swiper/dist/css/swiper.css'
