@@ -6,6 +6,8 @@
     <index-swiper :list="swiperInfo"></index-swiper>
     <index-container :list="containerInfo"></index-container>
     <index-comment :list="commentInfo"></index-comment>
+    <index-more :list="moreInfo"></index-more>
+    <index-bottom></index-bottom>
   </div>
 </template>
 
@@ -16,6 +18,8 @@
   import IndexSwiper from './swipe'
   import IndexContainer from './container'
   import IndexComment from './comment'
+  import IndexMore from './more'
+  import IndexBottom from './bottom'
   import axios from 'axios'
   export default {
     name: 'index',
@@ -25,13 +29,16 @@
       IndexQuery,
       IndexSwiper,
       IndexContainer,
-      IndexComment
+      IndexComment,
+      IndexMore,
+      IndexBottom
     },
     data () {
       return {
         swiperInfo: [],
         containerInfo: [],
-        commentInfo: []
+        commentInfo: [],
+        moreInfo: []
       }
     },
     methods: {
@@ -45,6 +52,7 @@
         this.swiperInfo = data.swiperList
         this.containerInfo = data.containerList
         this.commentInfo = data.commentList
+        this.moreInfo = data.moreList
       },
       handleGetDataErr () {
         console.log('err')

@@ -110,6 +110,12 @@
             {"imgSrc": "http://img1.qunarzz.com/piao/fusion/1711/15/dc5c35eeecc02602.jpg_228x168_9b1dfb71.jpg"}
           ]
         }
+    ],
+    "moreList": [
+      {"img": "http://img1.qunarzz.com/piao/fusion/1711/e7/dd88426980ca2502.jpg_228x168_94084b8c.jpg", "title": "天南门广场", "doll": "20", "address": "北京·西城区"},
+      {"img": "http://img1.qunarzz.com/piao/fusion/1711/e7/dd88426980ca2502.jpg_228x168_94084b8c.jpg", "title": "北京杜莎蜡像馆", "doll": "88", "address": "北京·前门大街"},
+      {"img": "http://img1.qunarzz.com/piao/fusion/1711/e7/dd88426980ca2502.jpg_228x168_94084b8c.jpg", "title": "天坛公园", "doll": "50", "address": "北京·东城区"},
+      {"img": "http://img1.qunarzz.com/piao/fusion/1711/e7/dd88426980ca2502.jpg_228x168_94084b8c.jpg", "title": "书立方/鸟巢", "doll": "220", "address": "北京·奥林匹克公园"}
     ]
     }
 }

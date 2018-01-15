@@ -1,6 +1,6 @@
 <template>
    <div class="iconfont">
-  <div v-for="(item, index) of list" :key="item.id" class="index-container iconfont">
+      <div v-for="(item, index) of list" :key="item.id" class="index-container iconfont">
         <ul class="container-tip1" :tip1="item.tip1">
           <span class="bill">&#xe609;</span>
           {{item.tip1}}
@@ -35,7 +35,7 @@
           </div>
         </ul>
 
-        <ul class="container-tip3" :txt="txt" @click="handleClickShowLi(index)">查看剩余产品</ul>
+        <ul class="container-tip3" @click="handleClickShowLi(index)">查看剩余产品</ul>
     </div>
    </div>
 </template>
