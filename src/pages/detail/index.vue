@@ -24,6 +24,7 @@
   export default {
     name: 'index',
     components: {
+      // 自定义 标签名
       IndexHeader,
       IndexMount,
       IndexQuery,

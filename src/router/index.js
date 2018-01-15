@@ -11,5 +11,15 @@ export default new Router({
       name: 'Index-detail',
       component: Index
     }
+    // {
+    //   path: '/city',
+    //   name: 'Index-city',
+    //   component: City
+    // },
+    // {
+    //   path: '/',
+    //   name: 'Index-daytrip',
+    //   component: Daytrip
+    // }
   ]
 })
