@@ -4,7 +4,7 @@
     <div class="search">
       <span class="iconfont search-icon">&#xe632;</span>请输入搜索内容
     </div>
-    <div class="city">
+    <div class="city" @click="handleClick">
       北京
     </div>
   </div>
