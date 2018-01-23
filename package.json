@@ -11,17 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     "assert": "^1.4.1",
-<<<<<<< HEAD
     "axios": "^0.17.1",
-=======
->>>>>>> 3c80ba7a107f8394998f8405ee96683e31adfee3
->>>>>>> 569af2f3903eae637930f4cccc868bc555513cce
->>>>>>> origin/master
     "fastclick": "^1.0.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

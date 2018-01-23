@@ -21,13 +21,13 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-more'
-  }
+export default {
+  name: 'index-more'
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .bottom
     height: 2.2rem
     padding-top: .6rem

@@ -1,7 +1,7 @@
 <template>
   <div class="comment iconfont">
     <p class="comment-h2">&#xe62a; 用户评论</p>
-    <div v-for="(item, index) of list" class="comment-tip">
+    <div v-for="(item, index) of list" :key="item" class="comment-tip">
       <div class="comment-tip-top">
         <span class="start">&#xe607;&#xe607;&#xe607;&#xe607;</span>
         <p class="user-new">
@@ -13,7 +13,7 @@
         <p class="user-rated"  :txt="item.txt">{{item.txt}}</p>
         <span @click="handleClickMore(index)" class="downIcon">&#xe611;</span>
         <div class="comment-img">
-          <img v-for="item2 of item.img" :src="item2.imgSrc" alt=""/>
+          <img v-for="item2 of item.img" :key="item2" :src="item2.imgSrc"/>
         </div>
       </div>
     </div>
@@ -22,33 +22,28 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-comment',
-    props: {
-      list: Array
-    },
-    methods: {
-      handleClickMore (index) {
-        const heightChange = document.getElementsByClassName("user-rated")[index]
-        heightChange.style.height == "2.1rem" ? heightChange.style.height = "auto" : heightChange.style.height = "2.1rem"
-        const downIcon = document.getElementsByClassName("downIcon")[index]
-//        downIcon.innerHTML == "&#xe611;" ? downIcon.innerHTML = "&#xe6a5;" : downIcon.innerHTML = "&#xe611;"
-        if(downIcon.innerHTML == "&#xe611;"){
-//        alert(1)
-          downIcon.innerHTML = "&#xe6a5;"
-        }
-        else{
-//        alert(2)
-          downIcon.innerHTML = "&#xe611;"
-        }
+export default {
+  name: 'index-comment',
+  props: {
+    list: Array
+  },
+  methods: {
+    handleClickMore (index) {
+      const heightChange = document.getElementsByClassName('user-rated')[index]
+      heightChange.style.height === '2.1rem' ? heightChange.style.height = 'auto' : heightChange.style.height = '2.1rem'
+      const downIcon = document.getElementsByClassName('downIcon')[index]
+      if (downIcon.innerHTML === '&#xe611;') {
+        downIcon.innerHTML = '&#xe6a5;'
+      } else {
+        downIcon.innerHTML = '&#xe611;'
       }
     }
   }
-
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .comment
     background: white
     margin-top: .15rem

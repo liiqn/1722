@@ -1,32 +1,34 @@
 <template>
   <div v-show="toggle" class="header-mount iconfont">
-    <p class="mount-icon">&#xe624;</p>
+    <router-link to="/">
+      <p class="mount-icon">&#xe624;</p>
+    </router-link>
     <p>故宫</p>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'index-mount',
-    data () {
-      return {
-        toggle: false
-      }
-    },
-    mounted () {
-      window.addEventListener('scroll', this.handleScroll)
-    },
-    methods : {
-      handleScroll () {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-        scrollTop == 0 ? this.toggle = false : this.toggle = true
-      }
+export default {
+  name: 'index-mount',
+  data () {
+    return {
+      toggle: false
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  methods: {
+    handleScroll () {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+      scrollTop === 0 ? this.toggle = false : this.toggle = true
     }
   }
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .header-mount
     position: fixed
     top: 0

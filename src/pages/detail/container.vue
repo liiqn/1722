@@ -7,7 +7,7 @@
         </ul>
 
         <ul class="container-tip2">
-          <li v-for="item2 of item.tip2">
+          <li v-for="item2 of item.tip2" :key="item2">
             <p class="container-txt">
              <span :bill="item2.bill">{{item2.bill}}</span>
              <span class="add">凭身份证入园</span>
@@ -20,7 +20,7 @@
             </p>
           </li>
           <div class="container-show-li">
-            <li v-for="item2 of item.tipOther">
+            <li v-for="item2 of item.tipOther" :key="item2">
               <p class="container-txt">
                 <span :bill="item2.bill">{{item2.bill}}</span>
                 <span class="add">凭身份证入园</span>
@@ -41,26 +41,24 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-container',
-    props: {
-      list: Array,
-      tip1: String
-    },
-    methods: {
-      handleClickShowLi (index) {
-        const ctrlLi = document.getElementsByClassName("container-show-li")[index]
-        const ctrlTip = document.getElementsByClassName("container-tip3")[index]
-
-        ctrlLi.style.display == "block" ? ctrlLi.style.display = "none" : ctrlLi.style.display = "block"
-      }
+export default {
+  name: 'index-container',
+  props: {
+    list: Array,
+    tip1: String
+  },
+  methods: {
+    handleClickShowLi (index) {
+      const ctrlLi = document.getElementsByClassName('container-show-li')[index]
+      // const ctrlTip = document.getElementsByClassName('container-tip3')[index]
+      ctrlLi.style.display === 'block' ? ctrlLi.style.display = 'none' : ctrlLi.style.display = 'block'
     }
   }
-
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .bill
     margin-right: .2rem
     color: #00bcd4

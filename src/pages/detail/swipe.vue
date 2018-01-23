@@ -10,41 +10,40 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-swiper',
-    props: {
-      list: Array
-    },
-    data () {
-      return {
-        toggle: false,
-        swiperOption: {
-          loop: true,
-          pagination: '.swiper-pagination',
-          paginationType: 'fraction'
-        }
-      }
-    },
-    created () {
-      this.handleBindEvents()
-    },
-    methods: {
-      handleHideClick () {
-         this.toggle = false
-      },
-      handleBindEvents () {
-        this.$bus.$on('change', this.handleShowChange.bind(this))
-      },
-      handleShowChange () {
-        this.toggle = true
+export default {
+  name: 'index-swiper',
+  props: {
+    list: Array
+  },
+  data () {
+    return {
+      toggle: false,
+      swiperOption: {
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationType: 'fraction'
       }
     }
+  },
+  created () {
+    this.handleBindEvents()
+  },
+  methods: {
+    handleHideClick () {
+      this.toggle = false
+    },
+    handleBindEvents () {
+      this.$bus.$on('change', this.handleShowChange.bind(this))
+    },
+    handleShowChange () {
+      this.toggle = true
+    }
   }
-
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .swiper
     background: black
     position: fixed

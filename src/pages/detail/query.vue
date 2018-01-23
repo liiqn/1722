@@ -43,26 +43,26 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-query',
-    data () {
-      return {
-        taggle: false
-      }
+export default {
+  name: 'index-query',
+  data () {
+    return {
+      taggle: false
+    }
+  },
+  methods: {
+    handleShowTipClick () {
+      this.taggle = true
     },
-    methods: {
-      handleShowTipClick () {
-        this.taggle = true
-      },
-      handleHideTipClick () {
-        this.taggle = false
-      }
+    handleHideTipClick () {
+      this.taggle = false
     }
   }
+}
 </script>
 
 <style rel="stylesheet/stylus" type="text/css" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .query-notice
     font-size: .5rem
   .query-notice2

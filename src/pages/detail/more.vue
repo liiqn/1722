@@ -2,7 +2,7 @@
      <div class="more iconfont">
        <p class="tip">&#xe62a;优质推荐</p>
        <ul>
-         <li v-for="(item, index) of list">
+         <li v-for="(item, index) of list" :key="index">
            <img :src="item.img" alt=""/>
            <div class="more-txt">
             <p class="more-txt-top">
@@ -17,16 +17,16 @@
 </template>
 
 <script>
-  export default {
-    name: 'index-more',
-    props: {
-      list: Array
-    }
+export default {
+  name: 'index-more',
+  props: {
+    list: Array
   }
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .tip
     height: .7rem
     line-height: .7rem

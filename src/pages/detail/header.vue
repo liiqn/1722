@@ -1,25 +1,27 @@
 <template>
   <div @click="handleClick" class="header iconfont">
     <img class="header-img" src="http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" alt=""/>
-    <a class="header-fontIcon" href="#">&#xe624;</a>
+    <router-link to="/">
+      <a class="header-fontIcon" href="#">&#xe624;</a>
+    </router-link>
     <p class="header-tip">故宫(AAAAA景区)</p>
     <div class="header-tip2">10</div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'index-header',
-    methods: {
-      handleClick () {
-        this.$bus.$emit('change')
-      }
+export default {
+  name: 'index-header',
+  methods: {
+    handleClick () {
+      this.$bus.$emit('change')
     }
   }
+}
 </script>
 
 <style rel="stylesheet/stylus" lang="stylus" scoped>
-  @import "../../assets/stylus/varibles.styl";
+  @import '../../assets/styles/common/varibles'
   .header
     position: relative
     height: 0
